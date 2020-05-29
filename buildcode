@@ -1,4 +1,0 @@
-sh label: '', script: '''for %%G in (*.sql) DO (echo Executing: "%%G" >> output.txt
-sqlcmd -H SwapnilN-MSD1 -E -S . -d QACOP -i "%%G" >> output.txt
-echo --------------------------------------------- >> output.txt
-)'''
