@@ -91,7 +91,7 @@ SELECT ROW_NUMBER() OVER ( ORDER BY PlanName, FileNM ,SourceTable, DQcheck, DQFo
 
 SET @ScenarioCount = (SELECT COUNT (*) from @TestScenario );
 
-/* Store Information for each row */
+/* Store Information for each rows */
 WHILE @s <= @ScenarioCount
 BEGIN
 
