@@ -57,7 +57,7 @@ DECLARE
 /* Creating table variable to store the column Names */
 DECLARE @column_table TABLE (
 	id INT NOT NULL,
-    value VARCHAR(MAX) NOT NULL )  
+    value VARCHAR(MAX) NOT NULL)  
 
 /* Creating table variable to store test sceanrio list */
 DECLARE @testscenario TABLE(
