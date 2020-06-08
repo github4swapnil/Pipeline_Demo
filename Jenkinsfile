@@ -10,8 +10,8 @@ pipeline {
       stage('Execute Stored Procedure')
       {
           steps{
-              
-             sh label: '', script: 'echo --------------------------------------------- >> output.txt'
+             sh label: '', script: '''sqlcmd -H 103.87.29.229 -E -S . -d QACOP -i "%%G" >> output.txt
+echo --------------------------------------------- >> output.txt'''
           }
       }
    }
