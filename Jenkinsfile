@@ -11,11 +11,7 @@ pipeline {
       {
           steps{
               
-             sh label: '', script: '''for %%G in (*.sql) DO (echo Executing: "%%G" >> output.txt
-sqlcmd -H 103.87.29.229 -E -S . -d QACOP -i "%%G" >> output.txt
-echo --------------------------------------------- >> output.txt
-)
-'''
+             sh label: '', script: 'echo --------------------------------------------- >> output.txt'
           }
       }
    }
