@@ -13,7 +13,7 @@ pipeline {
               bat label: '', script: '''for %%G in (*.sql) DO (echo Executing: "%%G" 
                 sqlcmd -H SwapnilN-MSD1 -E -S . -d QACOP -i "%%G" 
                 
-                copy  output.txt output.html
+                
                 )'''
           }
       }
