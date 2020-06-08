@@ -10,8 +10,13 @@ pipeline {
       stage('Execute Stored Procedure')
       {
           steps{
-             sh label: '', script: '''for %%G in (*.sql) DO (echo Executing: "%%G" >> output.txt
-echo --------------------------------------------- >> output.txt'''
+             
+              sh '''
+                    for sql_file in *.sql;
+            do
+                  echo "@${sql_file}" >> output.txt
+            done
+                '''
           }
       }
    }
