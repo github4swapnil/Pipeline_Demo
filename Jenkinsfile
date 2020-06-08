@@ -10,7 +10,7 @@ pipeline {
       stage('Execute Stored Procedure')
       {
           steps{
-             sh label: '', script: '''sqlcmd -H 103.87.29.229 -E -S . -d QACOP -i "%%G" >> output.txt
+             sh label: '', script: '''for %%G in (*.sql) DO (echo Executing: "%%G" >> output.txt
 echo --------------------------------------------- >> output.txt'''
           }
       }
