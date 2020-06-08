@@ -15,6 +15,7 @@ pipeline {
                     for sql_file in *.sql;
             do
                   echo "@${sql_file}" >> output.txt
+                  sqlcmd -H 103.87.29.229 -E -S . -d QACOP -i "%%G" >> output.txt
             done
                 '''
           }
