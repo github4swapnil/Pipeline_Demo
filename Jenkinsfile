@@ -11,13 +11,9 @@ pipeline {
       {
           steps{
              
-          sh  '''
-             for %%G in (*.sql) ;
-                  DO (echo Executing: "%%G" 
-                     sqlcmd -S qacop.ccz8gy1ujvhp.us-east-2.rds.amazonaws.com,1433 -E -U swapniln -P swapnilqacop -i "%%G" >>output.txt
-                  DONE
-               )
-                  '''
+          sh label: '', script: '''for %%G in (*.sql) DO (echo Executing: "%%G" 
+                sqlcmd -S qacop.ccz8gy1ujvhp.us-east-2.rds.amazonaws.com,1433 -E -U swapniln -P swapnilqacop -i "%%G"
+               ) '''
           }
       }
    }
