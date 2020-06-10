@@ -11,9 +11,11 @@ pipeline {
       {
           steps{
              
-             sh label: '', script: '''for sql_file in (*.sql) DO echo "@${sql_file}" 
-                sqlcmd -S qacop.ccz8gy1ujvhp.us-east-2.rds.amazonaws.com,1433 -E -U swapniln -P swapnilqacop -i "@${sql_file}"
-               ) '''
+             sh label: '', script: 
+                '''for sql_file in (*.sql) 
+                        DO echo "@${sql_file}" 
+                           sqlcmd -S qacop.ccz8gy1ujvhp.us-east-2.rds.amazonaws.com,1433 -E -U swapniln -P swapnilqacop -i "@${sql_file}"
+                '''
           }
       }
    }
