@@ -11,9 +11,10 @@ pipeline {
       {
           steps{
              
-           bat label: '', script: '''for %%G in (*.sql) DO (echo Executing: "%%G" 
-                sqlcmd -H SwapnilN-MSD1 -E -S . -d QACOP -i "%%G"
-               
+          sh label: '', script: 
+             '''for %%G in (*.sql) 
+                  DO (echo Executing: "%%G" 
+                     sqlcmd -S qacop.ccz8gy1ujvhp.us-east-2.rds.amazonaws.com,1433 -E -U swapniln -P swapnilqacop -i "%%G")
                )
                   '''
           }
