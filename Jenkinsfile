@@ -14,8 +14,8 @@ pipeline {
              sh label: '', script: 
                 '''for sql_file in *.sql 
                         do 
-                           echo "@${sql_file}" 
-                           sqlcmd -S qacop.ccz8gy1ujvhp.us-east-2.rds.amazonaws.com,1433 -E -U swapniln -P swapnilqacop -i "@${sql_file}"
+                           echo "${sql_file}" 
+                           /opt/mssql-tools/bin/sqlcmd -S qacop.ccz8gy1ujvhp.us-east-2.rds.amazonaws.com,1433 -E -U swapniln -P swapnilqacop -i "${sql_file}"
                         done
                 '''
           }
