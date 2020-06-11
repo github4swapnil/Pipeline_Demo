@@ -1,5 +1,5 @@
 USE [QACOP1]  
-GO
+GO  
 
 SET ANSI_NULLS ON 
 GO
