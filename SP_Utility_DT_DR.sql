@@ -1,6 +1,6 @@
 --DROP PROCEDURE LANDMARK_HUMANA_TRR
 
-CREATE OR ALTER PROCEDURE SP_Utility_DT_DR
+CREATE OR ALTER PROCEDURE SP_Utility_DT_DR  
 
 AS
 /* Declare all required variables and updated list of columns for @list */
