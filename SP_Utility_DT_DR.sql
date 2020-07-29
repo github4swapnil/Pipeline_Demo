@@ -7,7 +7,7 @@ AS
 DECLARE @ScenarioCount int, @SOURCE_CNT int, @TARGET_CNT int, @FINAL_STATUS nvarchar(50) , @STATUS_DESCRIPTION nvarchar (500), @DQ_REMARKS nvarchar (500),
 @id INT = 1, @i INT = 1, @s INT = 1, @COL_COUNT INT ,@COLUMN_NAME nvarchar(50) , @sqlText nvarchar(max) , @VAR nvarchar(50),
 @PlanName nvarchar(max), @FileNM nvarchar(max),@SourceTable nvarchar(max) = NULL ,
- @TargetTable nvarchar(max) = NULL , @TestScenarioName nvarchar(max) , @TestScenarioDetails nvarchar(max) ,
+ @TargetTable nvarchar(max) = NULL , @TestScenarioName nvarchar(max) , @TestScenarioDetails nvarchar(max) ,  
  @Dateformatvalue nvarchar(max), @SRCTableName nvarchar(max), @TRGTableName nvarchar(max),
 @SourceSQL nvarchar(max) , @TargetSQL nvarchar(max)  , @SRCMinusTRGTableName nvarchar(max),
 @TRGMinusSRCTableName nvarchar(max) , @row_num INT , @SOURCERECORD_CNT INT , @TARGETRECORD_CNT INT
